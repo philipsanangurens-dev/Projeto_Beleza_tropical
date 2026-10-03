@@ -1,0 +1,41 @@
+* {
+    background-color: #ffff;
+    }
+
+.logo {
+    height: 100px;
+    background-color: #256e2f;
+    }
+
+  .header {
+    background-color: #256e2f;
+    display: flex;
+    flex-direction: row;
+
+    }
+
+
+.Imagem_profile {
+    height: 300px;
+    border-radius: 100%;
+    }
+
+.sobre-mim {
+display: flex;
+flex-direction: row;
+    }
+
+
+.design_image    {
+max-height: 100%;
+max-width: 100%;
+    }
+
+.card {
+ height: 225px;
+ width: 225px;
+ border-radius: 12px;
+ box-shadow: 4px 4px 12px #aaa;
+
+    }
+

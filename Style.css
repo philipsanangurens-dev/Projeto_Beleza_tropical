@@ -27,13 +27,17 @@
 
 .menu a {
     text-decoration: none;
-    font-weight: bold;
-    color: #000;
+    color: #fff;
+    font-family: -apple-system, sans-serif;
+    font-size: 15px;
+    background-color: #256e2f;
+    padding: 5px 10px;
+    border-radius: 12px;
     }
 
 .Imagem_profile {
     height: 300px;
-    border-radius: 100%;
+    border-radius: 200%;
     }
 
 .sobre-mim {
@@ -41,16 +45,26 @@ display: flex;
 flex-direction: row;
     }
 
-
-.contato-buttons{
-    font-family: -apple-system, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 20px;
-    display: flex;
+.inicio-H1 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 40px;
+    margin-bottom: 5px;
     gap: 10px;
-    border-radius: 8px;
     
+    }
+
+.button_a, .button_instagram {
+    text-decoration: none;
+    font-family: -apple-system, sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #256e2f;
+    border-radius: 12px;
+    gap: 10px;
 
     }    
 

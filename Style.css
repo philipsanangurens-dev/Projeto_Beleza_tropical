@@ -45,26 +45,13 @@ flex-direction: row;
 
 .inicio-H1 {
     font-family: 'Amatic SC', sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bolder;
-    line-height: 40px;
-    margin-bottom: 5px;
+    line-height: 1.2;
+    margin-bottom: 2px;
     gap: 10px;
     
-    }
-
-.button_a, .button_instagram {
-    text-decoration: none;
-    font-family: -apple-system, sans-serif;
-    font-size: 15px;
-    display: inline-block;
-    margin-top: 5px;
-    padding: 5px 10px;
-    background-color: #256e2f;
-    border-radius: 12px;
-    gap: 10px;
-
-    }    
+    }  
 
 .design_image    {
     width: 100%;
@@ -74,7 +61,7 @@ flex-direction: row;
     flex-shrink: 0;
     }
 
-
+/* A partir de la linea 65 inicia la estilizacion de las CARD de diseño */
 .designs-container {
     display: flex;
     flex-direction: row;
@@ -107,13 +94,14 @@ flex-direction: row;
     border-bottom: 4px solid #256e2f;
     }    
 
-.card .design_name, .card  .colaboration_name {
+.card .design_name {
     display: block;
     background: transparent;
     flex-shrink: 0;
     padding: 0 16px;
     font-family: -apple-system, sans-serif;
     overflow-wrap: anywhere;
+    align-items: center;
     }
     
 .card .design_name {
@@ -138,27 +126,29 @@ flex-direction: row;
         }
     }
 
+/* hasta la fila 125 esta la informacion relacionada a la estilizacion de las card de los diseños */ 
+
+
+/* A partir de la fila 132 inicia la estilizacion de la seccion "minha historia textil" */
+
 #sobre-mim {
     box-sizing: border-box;
-    max-width: 1100px;
-    margin: 38px auto;
-    padding: 32px;
+    max-width: 1300px;
+    margin: 28px auto;
+    padding: 16px 16px 32px;
     background-color: #f2f8f4;
-    border: 1px solid #dce5ef;
     border-radius: 24px;
     }
 
 #sobre-mim .inicio-H1 {
-    margin-top: 0 0 24px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     color: #05052d;
-    line-height: 1.2;
     }
 
 #sobre-mim .sobre-mim {
     display: flex;
     align-items: center;
-    gap: 36px;
+    gap: 26px;
     }
 
 #sobre-mim .Imagem_profile {
@@ -194,8 +184,8 @@ flex-direction: row;
 
 @media (max-width: 700px) {
     #sobre-mim {
-        margin: 32px auto;
-        padding: 24px 20px;
+        margin: 16px auto;
+        padding: 16px 16px;
     }
 
     #sobre-mim .sobre-mim {
@@ -210,11 +200,13 @@ flex-direction: row;
     }
 }
 
+/* A partir de la lineas 202 comienzo a estilizar la seccion de Inicio */
+
 #inicio {
    Box-sizing: border-box;
-   max-width: 1100px;
+   max-width: 1300px;
    margin: 20px auto;
-   padding: 34px 20px;
+   padding: 15px 15px;
    background: linear-gradient(200deg, #33ca47, #3939cc);
    border-radius: 24px;
    border-top: 5px solid #256e2f;
@@ -223,5 +215,66 @@ flex-direction: row;
 }
 
 #inicio .inicioEtiqueta {
-  
+  display: inline-block;
+  color: #1633d4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
+
+#inicio .inicio-H1 {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  color: #fff;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: (42px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+#inicio .inicioTexto {
+   max-width: 300px;
+   margin: 0px auto 0px;
+   color: #e5ebf7;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 50px;
+   line-height: 1.8;
+}
+
+#inicio .inicioAction {
+    gap: 16px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 2px solid #2df438;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button_a, .button_instagram {
+   text-decoration: none;
+   margin-top: 5px;
+   padding: 5px 10px;
+   background-color: #dce5ef;
+   border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+    #inicio {
+        margin: 24px auto; 
+        padding: 40px 20px;
+    }
+
+    #inicio .inicio-descricao {
+        font-size: 20px;      
+    }
+}
+
+/* Hasta la linea 276 esta el estilo de la seccion de Inicio*/

@@ -28,7 +28,7 @@ body {
     color: #fff;
     font-family: -apple-system, sans-serif;
     font-size: 15px;
-    background-color: #256e2f;
+    background-color: #33ca47;
     padding: 5px 10px;
     border-radius: 12px;
     }
@@ -207,7 +207,7 @@ flex-direction: row;
    max-width: 1300px;
    margin: 20px auto;
    padding: 15px 15px;
-   background: linear-gradient(200deg, #33ca47, #3939cc);
+   background: linear-gradient(200deg, #33ca47, #1512e4);
    border-radius: 24px;
    border-top: 5px solid #256e2f;
    text-align: center;
@@ -216,10 +216,10 @@ flex-direction: row;
 
 #inicio .inicioEtiqueta {
   display: inline-block;
-  color: #1633d4;
+  color: #33ca47;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -236,11 +236,10 @@ flex-direction: row;
 
 #inicio .inicioTexto {
    max-width: 300px;
-   margin: 0px auto 0px;
    color: #e5ebf7;
    font-family: Arial, Helvetica, sans-serif;
    font-size: 50px;
-   line-height: 1.8;
+   line-height: 1.5;
 }
 
 #inicio .inicioAction {
@@ -250,7 +249,7 @@ flex-direction: row;
     align-items: center;
     min-height: 48px;
     padding: 12px 24px;
-    border: 2px solid #2df438;
+    border: 3px solid #2df438;
     border-radius: 12px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -278,3 +277,69 @@ flex-direction: row;
 }
 
 /* Hasta la linea 276 esta el estilo de la seccion de Inicio*/
+
+/*  el estilo de la tabla comienza a partir de la fila 283 */
+
+#marcas {
+    box-sizing: border-box;      
+    max-width: 1300px;           
+    margin: 48px auto;          
+    padding: 24px;               
+}
+
+#marcas .inicio-H1 {
+    margin: 0 0 24px;           
+    color: #05052d;            
+    line-height: 1.2;            
+}
+
+#marcas table {
+    width: 100%;                
+    min-width: 560px;            
+    border-collapse: collapse;  
+    font-family: Arial, sans-serif; 
+    font-size: 16px;             
+    line-height: 1.5;            
+    color: #111822;
+}
+
+#marcas th, #marcas td {
+    padding: 18px 20px;          
+    text-align: left;           
+    vertical-align: middle;
+}
+
+#marcas tbody td {
+    background-color: #a4eeaa;
+    border-bottom: 1px solid #e3e9ef
+}
+
+#marcas tbody tr:nth-child(even) td {
+    background-color: #f2f8f4;
+}
+
+#marcas tbody td:first-child {
+    color: #0c0f0c;          
+    font-weight: 700;            
+}
+
+#marcas tbody tr:last-child td {
+    border-bottom: none;
+}
+
+@media (hover: hover) {
+    #marcas tbody tr:hover td {
+        background-color: #e8f2ed; 
+    }
+}
+
+@media (max-width: 700px) {
+    #marcas {
+        margin: 32px auto;       
+        padding: 16px;           
+    }
+
+    #marcas th, #marcas td {
+        padding: 14px 16px;      
+    }
+}

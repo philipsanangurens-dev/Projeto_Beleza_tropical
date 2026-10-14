@@ -91,8 +91,8 @@ flex-direction: row;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    flex: 0 0 225px;
-    width: 225px ;
+    flex: 0  0 calc((100% - 80px) / 5);
+    width: auto ;
     min-width: 0;
     height: auto;
     overflow: hidden;
@@ -116,7 +116,11 @@ flex-direction: row;
 
 
 #designs .card .design_name {  /* nombre del patron*/
+    width: 100%;
+    height: auto;
     display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     margin: 16px 0 12px;
     padding: 0 16px;
     color: #256e2f;
@@ -173,7 +177,7 @@ flex-direction: row;
         margin: 32px auto;
         padding: 16px;
     }
-
+} 
 
 @media (prefers-reduced-motion: reduce) {      /* Respeta la preferencia de reducir animaciones */
     #designs .card {
@@ -261,7 +265,7 @@ flex-direction: row;
 
 /* A partir de la lineas 202 comienzo a estilizar la seccion de Inicio */
 
-#inicio  {
+#inicio  {      /* este es la seccion que tiene mas color*/
    Box-sizing: border-box;
    max-width: 1300px;
    margin: 20px auto;
@@ -273,7 +277,7 @@ flex-direction: row;
    color: #fff;
 }
 
-#inicio .inicioEtiqueta {
+#inicio .inicioEtiqueta {   /* este el nombre en verde*/
   display: inline-block;
   color: #33ca47;
   font-family: Arial, Helvetica, sans-serif;
@@ -293,12 +297,13 @@ flex-direction: row;
   line-height: 1.1;
 }
 
-#inicio .inicioText {
-   max-width: 300px;
+#inicio .inicioText {  /* texto de descripcion del area de inicio */
+   max-width: 1000px;
+   margin: 0 auto 24px;
    color: #e5ebf7;
    font-family: Arial, Helvetica, sans-serif;
-   font-size: 50px;
-   line-height: 1.5;
+   font-size: 18px;
+   line-height: 1.7;
 }
 
 #inicio .inicioAction {
@@ -330,12 +335,12 @@ flex-direction: row;
         padding: 40px 20px;
     }
 
-    #inicio .inicio-descricao {
+    #inicio .inicioText {
         font-size: 20px;      
     }
 }
 
-/* Hasta la linea 276 esta el estilo de la seccion de Inicio*/
+/* Hasta la linea 337 esta el estilo de la seccion de Inicio*/
 
 /*  el estilo de la tabla comienza a partir de la fila 283 */
 
@@ -368,13 +373,15 @@ flex-direction: row;
     vertical-align: middle;
 }
 
-#marcas tbody td {
-    background-color: #a4eeaa;
-    border-bottom: 1px solid #e3e9ef
+#marcas tbody td {  /* estilo y color de las filas*/
+    background-color: #dceee3;
+    color: #172b4d;
+    font-weight: 700;
+    border-bottom: 3px solid;
 }
 
 #marcas tbody tr:nth-child(even) td {
-    background-color: #f2f8f4;
+    background-color: #edf3fa;
 }
 
 #marcas tbody td:first-child {

@@ -59,16 +59,16 @@ flex-direction: row;
 #designs {
     box-sizing: border-box;
     max-width: 1300px;
-    margin: 48px; auto;
+    margin: 48px auto;
     padding: 24px;
 }
 
-#desings .inicio-H1 {
+#designs .inicio-H1 {
     margin: 0 0 16px;
     color: #05052d;
 }
 
-#designs .inicio-descricao {      /* parrafo de presentacion*/
+#designs .designs-descricao {      /* parrafo de presentacion*/
      max-width: 720px;
      margin: 0 0 28px;
      color: #263447;
@@ -101,7 +101,7 @@ flex-direction: row;
     border-radius: 18px;
     text-decoration: none;
     color: #05052d;
-    box-shadow: 0 6px 18px rgba ( 5, 5, 45,0.10);
+    box-shadow: 0 6px 18px rgba(5, 5, 45, 0.10);
 }
 
 
@@ -117,7 +117,7 @@ flex-direction: row;
 
 #designs .card .design_name {  /* nombre del patron*/
     display: block;
-    margin: 16px 0 12px
+    margin: 16px 0 12px;
     padding: 0 16px;
     color: #256e2f;
     font-family: Arial, sans-serif;
@@ -137,7 +137,7 @@ flex-direction: row;
     text-align: center;
 }
 
-#designs .designs-botao {     /* centra el boton de la galeria completa */
+#designs .designs-acoes {     /* centra el boton de la galeria completa */
     margin-top: 32px;
     text-align: center;
 }
@@ -146,7 +146,7 @@ flex-direction: row;
     display: inline-block;
     padding: 14px 24px;
     background-color: #256e2f;
-    color: #fff
+    color: #fff;
     text-decoration: none;
     border-radius: 12px;
     font-family: Arial, sans-serif;
@@ -174,11 +174,6 @@ flex-direction: row;
         padding: 16px;
     }
 
-    #designs .designs-container {
-        grid-template-columns: minmax(0, 1fr);
-    }
-}
-
 
 @media (prefers-reduced-motion: reduce) {      /* Respeta la preferencia de reducir animaciones */
     #designs .card {
@@ -190,10 +185,10 @@ flex-direction: row;
     }
 }
 
-/* hasta la fila 194 esta la informacion relacionada a la estilizacion de las card de los diseños */ 
 
 
-/* A partir de la fila 132 inicia la estilizacion de la seccion "minha historia textil" */
+
+/* A partir de la fila 193  inicia la estilizacion de la seccion "minha historia textil" */
 
 #sobre-mim {
     box-sizing: border-box;
@@ -266,7 +261,7 @@ flex-direction: row;
 
 /* A partir de la lineas 202 comienzo a estilizar la seccion de Inicio */
 
-#inicio {
+#inicio  {
    Box-sizing: border-box;
    max-width: 1300px;
    margin: 20px auto;
@@ -293,12 +288,12 @@ flex-direction: row;
   margin: 0 auto 24px;
   color: #fff;
   font-family: 'Amatic SC', sans-serif;
-  font-size: (42px, 6vw, 72px);
+  font-size: clamp(42px, 6vw, 72px);
   font-weight: 700;
   line-height: 1.1;
 }
 
-#inicio .inicioTexto {
+#inicio .inicioText {
    max-width: 300px;
    color: #e5ebf7;
    font-family: Arial, Helvetica, sans-serif;

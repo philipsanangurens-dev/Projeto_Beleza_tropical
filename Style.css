@@ -106,21 +106,19 @@ flex-direction: row;
 
 
 #designs .card .design_image {   /* foto del diseño*/
-     box-sizing: border-box;
-     width: 100%;
-     height: 225px;
-     object-fit: cover;
-     display: block;
-     border-bottom: 4px solid #33ca47;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Esta propiedad va en la foto */
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+    border-bottom: 4px solid #33ca47;
 }
 
 
 #designs .card .design_name {  /* nombre del patron*/
-    width: 100%;
-    height: auto;
     display: block;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
     margin: 16px 0 12px;
     padding: 0 16px;
     color: #256e2f;
@@ -172,12 +170,22 @@ flex-direction: row;
     }  
 
 
-@media (max-width: 600px) {       /* Una columna en celulares */
+@media (max-width: 1000px) {       /* Una columna en celulares */
     #designs {
-        margin: 32px auto;
-        padding: 16px;
+        margin: 0 0 225px;
+        padding: 225px;
     }
 } 
+
+    #designs .designs-container {
+        scroll-snap-type: x proximity;
+        scrollbar-width: thin;
+        scrollbar-color: #729bc7 #edf3fa;
+    }
+
+    #designs .card {
+        scroll-snap-align: start;
+    }
 
 @media (prefers-reduced-motion: reduce) {      /* Respeta la preferencia de reducir animaciones */
     #designs .card {

@@ -493,7 +493,7 @@ flex-direction: row;
 }
 
 
-#midia .livro-descricao {     /* Descripcion del libro*/
+#midia .livroDescricao {     /* Descripcion del libro*/
     margin: 16px 0 0;
     color: #263447;
     font-family: Arial, sans-serif;

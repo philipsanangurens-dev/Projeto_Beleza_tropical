@@ -417,3 +417,86 @@ flex-direction: row;
         padding: 14px 16px;      
     }
 }
+
+#midia{        /*caja general de la seccion libros*/
+    box-sizing: border-box;
+    max-width: 1300px;
+    padding: 32px;
+    background-color: #f2f8f4;
+    border: 1px solid #dce8df;
+    border-radius: 24px;
+}
+
+#midia .inicio-H1 {        /* titulo principal de la seccion libros*/
+    margin: 0 0 12px;
+    color: #05052d;
+    line-height: 1.2;
+}
+
+#midia .livrosContainer{  /*Parrafo de introduccion seccion libro*/
+    margin: 0 0 32px;
+    color: #263447;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+#midia .livro {    /* card individual de libros*/
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 24px;
+   background-color: #fff;
+   border: 1px solid #d4dfeb;
+   border-radius: 18px;
+   box-shadow: 0 6px 18px rgba(5, 5, 45, 0.06);
+}
+
+#midia .livroCapa {     /*portada del libro*/
+    display: block;
+    width: 38%;
+    max-width: 180px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 3px;
+    box-shadow: 0 10px 18px rgba(5, 5, 45, 0.20);
+
+} 
+
+#midia .livroTexto {    /*nombre del libro*/
+    margin: 0 0 16px;
+    color: #05052d;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+#midia .livroEtiqueta {       /* Etiqueta de participación */
+    margin: 0;
+    color: #256e2f;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#midia .livroEtiqueta::after {   /*Linea verde decoracion de la seccion libros*/
+    content: "";               
+    display: block;
+    width: 40px;
+    height: 2px;
+    margin-top: 16px;
+    background-color: #50845b;
+}
+
+
+#midia .livro-descricao {     /* Descripcion del libro*/
+    margin: 16px 0 0;
+    color: #263447;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}

@@ -442,13 +442,15 @@ flex-direction: row;
 }
 
 #midia .livro {    /* card individual de libros*/
-   display: grid;
-   grid-template-columns: repeat(2, minmax(0, 1fr));
-   gap: 24px;
-   background-color: #fff;
-   border: 1px solid #d4dfeb;
-   border-radius: 18px;
-   box-shadow: 0 6px 18px rgba(5, 5, 45, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-width: 0;
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #d4dfeb;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(5, 5, 45, 0.06);
 }
 
 #midia .livroCapa {     /*portada del libro*/

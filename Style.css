@@ -445,15 +445,16 @@ flex-direction: row;
 
 #midia .livrosContainer {    /* los libros en forma de fila*/
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
 }
 
 #midia .livro {    /* card individual de libros*/
     box-sizing: border-box;
     display: flex;
-    align-items: center;
-    gap: 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
     min-width: 0;
     padding: 24px;
     background-color: #fff;
@@ -466,10 +467,10 @@ flex-direction: row;
 
 #midia .livroCapa {     /*portada del libro*/
     display: block;
-    width: 38%;
+    width: 100%;
     max-width: 180px;
     height: auto;
-    flex-shrink: 0;
+    align-self: center;
     border-radius: 3px;
     box-shadow: 0 10px 18px rgba(5, 5, 45, 0.20);
 
@@ -514,14 +515,19 @@ flex-direction: row;
     line-height: 1.7;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     #midia {
         margin: 32px auto;
         padding: 24px 16px;
     }
 
     #midia .livrosContainer {
-        gap: 12px;
+        grid-template-columns: repeat(4, minmax(220px, 1fr));
+        overflow-x: auto;
+        padding-bottom: 16px;
+        scroll-snap-type: x proximity;
+        scrollbar-width: thin;
+        scrollbar-color: #729bc7 #edf3fa;
     }
 
     #midia .livro {

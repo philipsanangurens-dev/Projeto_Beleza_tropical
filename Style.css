@@ -276,7 +276,7 @@ flex-direction: row;
 #inicio  {      /* este es la seccion que tiene mas color*/
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1.05fr 1fr;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     align-items: center;
     gap: 40px;
     max-width: 1300px;
@@ -373,6 +373,11 @@ flex-direction: row;
 #inicio .inicio-botao:focus-visible {
     outline: 3px solid #a8dfbd;
     outline-offset: 4px;
+}
+
+#inicio .inicio-conteudo {
+    min-width: 0;
+    text-align: left;
 }
 
 @media (hover: hover) {

@@ -420,7 +420,9 @@ flex-direction: row;
 
 #midia{        /*caja general de la seccion libros*/
     box-sizing: border-box;
+    width: 100%;
     max-width: 1300px;
+    margin: 48px auto;
     padding: 32px;
     background-color: #f2f8f4;
     border: 1px solid #dce8df;
@@ -433,7 +435,7 @@ flex-direction: row;
     line-height: 1.2;
 }
 
-#midia .livrosContainer{  /*Parrafo de introduccion seccion libro*/
+#midia .livroDescricao{  /*Parrafo de introduccion seccion libro*/
     margin: 0 0 32px;
     color: #263447;
     font-family: Arial, sans-serif;
@@ -441,9 +443,9 @@ flex-direction: row;
     line-height: 1.7;
 }
 
-#midia .livro {    /* card individual de libros*/
-    display: flex;
-    align-items: center;
+#midia .livrosContainer {    /* card individual de libros*/
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
     min-width: 0;
     padding: 24px;
@@ -452,6 +454,8 @@ flex-direction: row;
     border-radius: 18px;
     box-shadow: 0 6px 18px rgba(5, 5, 45, 0.06);
 }
+
+
 
 #midia .livroCapa {     /*portada del libro*/
     display: block;
@@ -464,7 +468,7 @@ flex-direction: row;
 
 } 
 
-#midia .livroTexto {    /*nombre del libro*/
+#midia .livroTexto h3 {    /*nombre del libro*/
     margin: 0 0 16px;
     color: #05052d;
     font-family: 'Amatic SC', sans-serif;
@@ -501,4 +505,32 @@ flex-direction: row;
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    #midia {
+        margin: 32px auto;
+        padding: 24px 16px;
+    }
+
+    #midia .livrosContainer {
+        gap: 12px;
+    }
+
+    #midia .livro {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        gap: 16px;
+    }
+
+    #midia .livroCapa {
+        width: 100%;
+        max-width: 160px;
+        align-self: center;
+    }
+
+    #midia .livroTexto h3 {
+        font-size: 28px;
+    }
 }

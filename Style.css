@@ -418,8 +418,10 @@ flex-direction: row;
     }
 }
 
-#midia{        /*caja general de la seccion libros*/
+#midia {        /*caja general de la seccion libros*/
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
     max-width: 1300px;
     margin: 48px auto;
@@ -435,7 +437,7 @@ flex-direction: row;
     line-height: 1.2;
 }
 
-#midia .livroDescricao{  /*Parrafo de introduccion seccion libro*/
+#midia .livros-introducao{  /*Parrafo de introduccion seccion libro*/
     margin: 0 0 32px;
     color: #263447;
     font-family: Arial, sans-serif;
@@ -443,16 +445,17 @@ flex-direction: row;
     line-height: 1.7;
 }
 
-#midia .livrosContainer {    /* card individual de libros*/
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+#midia .livro {    /* card individual de libros*/
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
     gap: 24px;
     min-width: 0;
     padding: 24px;
     background-color: #fff;
     border: 1px solid #d4dfeb;
     border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(5, 5, 45, 0.06);
+    box-shadow: 0 8px 24px rgba(5, 5, 45, 0.10);
 }
 
 

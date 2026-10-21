@@ -274,83 +274,162 @@ flex-direction: row;
 /* A partir de la lineas 202 comienzo a estilizar la seccion de Inicio */
 
 #inicio  {      /* este es la seccion que tiene mas color*/
-   Box-sizing: border-box;
-   max-width: 1300px;
-   margin: 20px auto;
-   padding: 15px 15px;
-   background: linear-gradient(200deg, #33ca47, #1512e4);
-   border-radius: 24px;
-   border-top: 5px solid #256e2f;
-   text-align: center;
-   color: #fff;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 24px auto;
+    padding: 40px;
+    background: linear-gradient(
+        120deg,
+        #05052d 0%,
+        #07546a 55%,
+        #38784e 100%
+    );
+    border-radius: 24px;
+    color: #fff;
 }
 
-#inicio .inicioEtiqueta {   /* este el nombre en verde*/
-  display: inline-block;
-  color: #33ca47;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+#inicio .inicio-conteudo {    /* texto de inicio*/
+    min-width: 0;
 }
+
+#inicio .inicioEtiqueta {
+    display: block;
+    margin-bottom: 20px;
+    color: #a8dfbd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 
 #inicio .inicio-H1 {
-  max-width: 760px;
-  margin: 0 auto 24px;
-  color: #fff;
-  font-family: 'Amatic SC', sans-serif;
-  font-size: clamp(42px, 6vw, 72px);
-  font-weight: 700;
-  line-height: 1.1;
+    margin: 0 0 16px;
+    color: #fff;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: clamp(48px, 5vw, 76px);
+    font-weight: 700;
+    line-height: 1.1;
 }
 
-#inicio .inicioText {  /* texto de descripcion del area de inicio */
-   max-width: 1000px;
-   margin: 0 auto 24px;
-   color: #e5ebf7;
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 18px;
-   line-height: 1.7;
+#inicio .inicioSubtitulo {
+    margin: 0 0 20px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 700;
+    line-height: 1.4;
 }
 
-#inicio .inicioAction {
-    gap: 16px;
+#inicio .inicioText {
+    max-width: 480px;
+    margin: 0 0 28px;
+    color: #e5ebf7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+#inicio .inicioAction {      /*Botones*/
+    #inicio .inicioAction {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+#inicio .inicio-botao {
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     min-height: 48px;
-    padding: 12px 24px;
-    border: 3px solid #2df438;
+    padding: 12px 22px;
+    border: 1px solid transparent;
     border-radius: 12px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
     text-decoration: none;
 }
 
-.button_a, .button_instagram {
-   text-decoration: none;
-   margin-top: 5px;
-   padding: 5px 10px;
-   background-color: #dce5ef;
-   border-radius: 12px;
+#inicio .inicio-botao-principal {
+    background-color: #256e2f;
+    color: #fff;
 }
 
-@media (max-width: 700px) {
-    #inicio {
-        margin: 24px auto; 
-        padding: 40px 20px;
+#inicio .inicio-botao-secundario {
+    background-color: transparent;
+    border-color: #dce8ef;
+    color: #fff;
+}
+
+#inicio .inicio-botao:focus-visible {
+    outline: 3px solid #a8dfbd;
+    outline-offset: 4px;
+}
+
+@media (hover: hover) {
+    #inicio .inicio-botao-principal:hover {
+        background-color: #1b5424;
     }
 
-    #inicio .inicioText {
-        font-size: 20px;      
+    #inicio .inicio-botao-secundario:hover {
+        background-color: rgba(255, 255, 255, 0.12);
     }
 }
 
-/* Hasta la linea 337 esta el estilo de la seccion de Inicio*/
+/* Trayectoria */
+#inicio .inicio-destaques {
+    margin: 28px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.30);
+    color: #e5ebf7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
 
-/*  el estilo de la tabla comienza a partir de la fila 283 */
+/* Composición fotográfica */
+#inicio .inicio-fotos {
+    position: relative;
+    min-width: 0;
+    padding: 0 12px 24px 0;
+}
+
+#inicio .inicio-foto-principal {
+    display: block;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 22px;
+}
+
+#inicio .inicio-foto-detalhe {
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 38%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 4px solid #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(5, 5, 45, 0.25);
+}
+
+
+
+
+
+    /* formateo de la tabla comienza despues de esta linea*/
 
 #marcas {
     box-sizing: border-box;      

@@ -420,8 +420,6 @@ flex-direction: row;
 
 #midia {        /*caja general de la seccion libros*/
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
     max-width: 1300px;
     margin: 48px auto;
@@ -443,6 +441,12 @@ flex-direction: row;
     font-family: Arial, sans-serif;
     font-size: 17px;
     line-height: 1.7;
+}
+
+#midia .livrosContainer {    /* los libros en forma de fila*/
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
 }
 
 #midia .livro {    /* card individual de libros*/

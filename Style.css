@@ -284,9 +284,9 @@ flex-direction: row;
     padding: 40px;
     background: linear-gradient(
         120deg,
-        #05052d 0%,
-        #07546a 55%,
-        #38784e 100%
+        #0404a7 0%,
+        #06d44b 55%,
+        #28dd67 100%
     );
     border-radius: 24px;
     color: #fff;
@@ -346,12 +346,12 @@ flex-direction: row;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 48px;
-    padding: 12px 22px;
+    min-height: 56px;
+    padding: 16px 28px;
     border: 1px solid transparent;
     border-radius: 12px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.4;
     text-align: center;

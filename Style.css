@@ -525,7 +525,7 @@ flex-direction: row;
 #midia {        /*caja general de la seccion libros*/
     box-sizing: border-box;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 48px auto;
     padding: 32px;
     background-color: #f2f8f4;
@@ -873,7 +873,7 @@ flex-direction: row;
 /* Caja del footer: mismo ancho máximo que las otras secciones */
 #contato {
     box-sizing: border-box;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 32px auto 20px;
     padding: 32px 24px 20px;
     background: linear-gradient(120deg, #05052d, #102744);

@@ -773,13 +773,19 @@ flex-direction: row;
 }
 
 
-#aulas .aulas-depoimentos {     /* Separa los testimonios de la presentación */
-    margin-top: 40px;
-    padding-top: 32px;
-    border-top: 1px solid #cbdcd7;
+#depoimentos {
+    box-sizing: border-box;
+    max-width: 1500px; /* Mismo ancho máximo que tu sección de clases */
+    margin: 40px auto; /* Separa y centra la sección */
+    padding: 32px;
+    background-color: #f2f8f4;
+    border: 1px solid #dce8df;
+    border-radius: 24px;
+    color: #263447;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#aulas .aulas-depoimentos-titulo {
+#depoimentos .aulas-depoimentos-titulo {
     margin: 0 0 8px;
     color: #05052d;
     font-family: 'Amatic SC', sans-serif;
@@ -787,21 +793,21 @@ flex-direction: row;
     line-height: 1.2;
 }
 
-#aulas .aulas-depoimentos-intro {
+#depoimentos .aulas-depoimentos-intro {
     margin: 0 0 24px;
     font-size: 16px;
     line-height: 1.7;
 }
 
 
-#aulas .depoimentos-container {             /* Tres testimonios en fila */
+#depoimentos .depoimentos-container {             /* Tres testimonios en fila */
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
 
-#aulas .depoimento {           /* Tarjeta independiente de cada testimonio */
+#depoimentos .depoimento {           /* Tarjeta independiente de cada testimonio */
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -813,11 +819,11 @@ flex-direction: row;
 }
 
 
-#aulas .depoimento blockquote {           /* Elimina el margen que trae blockquote */
+#depoimentos .depoimento blockquote {           /* Elimina el margen que trae blockquote */
     margin: 0 0 20px;
 }
 
-#aulas .depoimento blockquote p {
+#depoimentos .depoimento blockquote p {
     margin: 0;
     font-size: 16px;
     font-style: italic;
@@ -826,7 +832,7 @@ flex-direction: row;
 }
 
 /* Alinea los nombres al pie de las tarjetas */
-#aulas .depoimento figcaption {
+#depoimentos .depoimento figcaption {
     margin-top: auto;
     color: #256e2f;
     font-size: 14px;
@@ -843,7 +849,7 @@ flex-direction: row;
 
 /* En celular, muestra un testimonio por fila */
 @media (max-width: 600px) {
-    #aulas {
+    #aulas #depoimentos {
         margin: 32px auto;
         padding: 24px 16px;
     }
@@ -852,7 +858,7 @@ flex-direction: row;
         grid-template-columns: minmax(0, 1fr);
     }
 
-    #aulas .aulas-beneficios {
+    #depoimentos .depoimentos-container {
         padding: 24px;
     }
 

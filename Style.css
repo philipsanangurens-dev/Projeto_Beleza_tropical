@@ -58,7 +58,7 @@ flex-direction: row;
 
 #designs {
     box-sizing: border-box;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 48px auto;
     padding: 24px;
 }
@@ -200,11 +200,11 @@ flex-direction: row;
 
 
 
-/* A partir de la fila 193  inicia la estilizacion de la seccion "minha historia textil" */
+/* A partir de la siguiente fila inicia la estilizacion de la seccion "minha historia textil" */
 
 #sobre-mim {
     box-sizing: border-box;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 28px auto;
     padding: 16px 16px 32px;
     background-color: #f2f8f4;
@@ -271,7 +271,7 @@ flex-direction: row;
     }
 }
 
-/* A partir de la lineas 202 comienzo a estilizar la seccion de Inicio */
+/* A partir de la lineas siguientes lineas comienzo a estilizar la seccion de Inicio */
 
 #inicio  {      /* este es la seccion que tiene mas color*/
     box-sizing: border-box;
@@ -279,7 +279,7 @@ flex-direction: row;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     align-items: center;
     gap: 40px;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 24px auto;
     padding: 40px;
     background: linear-gradient(
@@ -341,26 +341,32 @@ flex-direction: row;
     gap: 14px;
 }
 
-#inicio .inicio-botao {
+#inicio .inicio-botao,
+#inicio .button_a a,
+#inicio .button_instagram a {      /* Botones del area de inicio*/
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 56px;
-    padding: 16px 28px;
-    border: 1px solid transparent;
-    border-radius: 12px;
+    min-height: 56px;        
+    padding: 16px 28px;      
+    background-color: #fff; 
+    color: #256e2f;          
+    border: 1px solid #fff;
+    border-radius: 12px;    
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.5;
     text-align: center;
     text-decoration: none;
 }
 
-#inicio .inicio-botao-principal {
-    background-color: #256e2f;
-    color: #fff;
+#inicio .button_a,
+#inicio .button_instagram {
+    margin: 0;
+    padding: 0;
+    background: transparent;
 }
 
 #inicio .inicio-botao-secundario {
@@ -369,14 +375,21 @@ flex-direction: row;
     color: #fff;
 }
 
-#inicio .inicio-botao:focus-visible {
+#inicio .inicio-botao:focus-visible,
+#inicio .button_a a:focus-visible,
+#inicio .button_instagram a:focus-visible {
     outline: 3px solid #a8dfbd;
     outline-offset: 4px;
 }
 
-#inicio .inicio-conteudo {
-    min-width: 0;
-    text-align: left;
+@media (hover: hover) {
+    #inicio .inicio-botao:hover,
+    #inicio .button_a a:hover,
+    #inicio .button_instagram a:hover {
+        background-color: #edf5ef;
+        border-color: #edf5ef;
+        color: #174c20;
+    }
 }
 
 @media (hover: hover) {
@@ -413,7 +426,7 @@ flex-direction: row;
 
 #inicio .inicio-foto-principal {      /* Foto principal */
     display: block;
-    width: 100%;
+    width: 85%;
     height: auto;
     aspect-ratio: 4 / 5;
     max-height: 520px;
@@ -429,7 +442,7 @@ flex-direction: row;
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 36%;
+    width: 45%;
     height: auto;
     aspect-ratio: 1 / 1;     /* Marco cuadrado */
     object-fit: cover;
@@ -644,7 +657,7 @@ flex-direction: row;
 
 #aulas {      /* Caja general de clases: mantiene el ancho de las demás secciones */
     box-sizing: border-box;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 48px auto;
     padding: 40px;
     background: linear-gradient(135deg, #f2f8f4, #edf3fa);

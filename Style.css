@@ -207,7 +207,7 @@ flex-direction: row;
     max-width: 1500px;
     margin: 40px auto;
     padding: 40px;
-    background-color: linear-gradient(135deg, #f2f8f4, #edf3fa);
+    background: linear-gradient(135deg, #f2f8f4, #edf3fa);
     border: 1px solid #dce8df;
     border-radius: 24px;
     }
@@ -219,7 +219,7 @@ flex-direction: row;
 
 #sobre-mim .sobre-mim {
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
     align-items: center;
     gap: 48px;
     }
@@ -228,11 +228,13 @@ flex-direction: row;
     box-sizing: border-box;
     display: block;
     width: 100%;
-    height: auto;
+    max-width: 320px; /* Limita el ancho de la foto */
+    height: auto;    /* Conserva sus proporciones originales */
     min-width: 0;
+    justify-self: center;
     border-radius: 20px;
     box-shadow: 0 12px 28px rgba(5, 5, 45, 0.12);
-    }
+}
 
 #sobre-mim .historiaTexto {
     min-width: 0;
@@ -305,7 +307,7 @@ flex-direction: row;
     }
 
     #sobre-mim .Imagem_profile {
-        max-width: 420px;
+        max-width: 280px;
         justify-self: center;
     }
 

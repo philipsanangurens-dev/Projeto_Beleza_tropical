@@ -205,9 +205,10 @@ flex-direction: row;
 #sobre-mim {
     box-sizing: border-box;
     max-width: 1500px;
-    margin: 28px auto;
-    padding: 16px 16px 32px;
-    background-color: #f2f8f4;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: linear-gradient(135deg, #f2f8f4, #edf3fa);
+    border: 1px solid #dce8df;
     border-radius: 24px;
     }
 
@@ -217,33 +218,43 @@ flex-direction: row;
     }
 
 #sobre-mim .sobre-mim {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     align-items: center;
-    gap: 26px;
+    gap: 48px;
     }
 
 #sobre-mim .Imagem_profile {
     box-sizing: border-box;
-    width: 200px;
-    height: 340px;
-    flex-shrink: 0;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0px 8px 24px rgba(5,5,45,0.12);
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(5, 5, 45, 0.12);
     }
 
-.historiaTexto {
-    flex: 1;
+#sobre-mim .historiaTexto {
     min-width: 0;
+    max-width: 720px;
     color: #263447;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.8;
-    }
+  }
 
-.historiaTexto p {
-    margin: 0 0 16px;
-    }
+
+#sobre-mim .historiaEtiqueta {
+    display: block;
+    margin-bottom: 12px;
+    color: #256e2f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
 
 .historiaTexto .historiaDestaque {
     margin-bottom: 0;
@@ -253,21 +264,67 @@ flex-direction: row;
     font-weight: 700;
     }
 
-@media (max-width: 700px) {
+    #sobre-mim .inicio-H1 {
+    margin: 0 0 24px;
+    color: #05052d;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: clamp(40px, 4vw, 60px);
+    line-height: 1.15;
+}
+
+#sobre-mim .historiaTexto p {
+    margin: 0 0 18px;
+}
+
+#sobre-mim .historiaTexto .historiaAbertura {
+    color: #172b4d;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+#sobre-mim .historiaTexto .historiaDestaque {
+    margin: 24px 0 0;
+    padding: 4px 0 4px 20px;
+    border-left: 3px solid #50845b;
+    color: #256e2f;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+@media (max-width: 850px) {
     #sobre-mim {
-        margin: 16px auto;
-        padding: 16px 16px;
+        margin: 32px auto;
+        padding: 28px;
     }
 
     #sobre-mim .sobre-mim {
-        flex-direction: column;
-        gap: 24px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
     }
 
     #sobre-mim .Imagem_profile {
-        width: 100%;
-        max-width: 320px;
-        height: 320px;
+        max-width: 420px;
+        justify-self: center;
+    }
+
+       #sobre-mim .historiaTexto {
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    #sobre-mim {
+        padding: 24px 18px;
+    }
+
+    #sobre-mim .historiaTexto {
+        font-size: 16px;
+    }
+
+    #sobre-mim .historiaTexto .historiaAbertura {
+        font-size: 18px;
     }
 }
 
